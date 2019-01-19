@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Tibia Wiki</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
@@ -14,10 +14,11 @@
 
 <body>
 
-    <div class="container" style="margin-top:3%">
-
+    <div class="container">
         <form>
             <div style="width:65%;float: left">
+                <h1 class="centerh1">Imbuing System</h1>
+
                 <div class="row">
                     <div class="col">
                         <div class="input-group mb-3">
@@ -28,6 +29,7 @@
                                 <option selected value="none"></option>
                                 <option value="armor">Armaduras/Armors</option>
                                 <option value="backpack">Mochila/Backpacks</option>
+                                <option value="boots">Botas/Boots</option>
                                 <option value="helmet">Capacetes/Helmets</option>
                                 <option value="club">Clavas/Clubs</option>
                                 <option value="distance">Distância/Distance</option>
@@ -45,14 +47,31 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Item</label>
                             </div>
-                            <select class="custom-select" id="item_select" disabled>
+                            <select class="custom-select" id="item_select" disabled onchange="changeItem()">
                             </select>
                         </div>
+                    </div>
+                    <div id="itemImg" class="image">
+
+                    </div>
+                </div>
+                <h4  class="centerh1">Opções para Imbuir/Imbuing options</h2>
+                <div class="row">
+                    <div class="col">
+                        <select class="custom-select" id="bonus_select" onchange="" size="3">
+                        </select>
+                    </div>
+                    <div class="col">
+                        <select class="custom-select" id="imbue_select" size="3" onchange="">
+                            <option selected value="basic_lich">Basic Lich Shroud</option>
+                            <option value="intricate_lich">Intricate Lich Shroud (Premium)</option>
+                            <option value="powerful_lich">Powerful Lich Shroud (Premium)</option>
+                        </select>
                     </div>
                 </div>
             </div>
             <div style="width:35%; float: left">
-                img here
+                <h1 class="centerh1">Set Completo</h1>
             </div>
         </form>
 

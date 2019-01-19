@@ -1,0 +1,20 @@
+.centerh1{
+    text-align: center; 
+    margin-bottom: 15px;
+}
+
+select{
+    overflow: auto;
+}
+
+div.container{
+    margin-top: 15px;
+}
+
+.image{
+    margin-top: 3px;
+    height: 32px;
+    width: 32px;
+    float:left;
+    border: 1px solid black"
+}
