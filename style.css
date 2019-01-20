@@ -10,7 +10,9 @@ select{
 div.container{
     margin-top: 15px;
 }
-
+h1{ 
+    text-shadow: 2px 2px 5px red;
+}
 .image{
     margin-top: 3px;
     height: 32px;
