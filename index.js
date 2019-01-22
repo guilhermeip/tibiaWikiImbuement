@@ -248,7 +248,7 @@ function categoriaChange() {
         item_select.disabled = true;
         removeOptions(item_select);
         removeOptions(bonus_select);
-        document.getElementById("itemImg").backgroud
+        document.getElementById("itemImg").style = "background-image= none";
     }
 }
 
@@ -258,7 +258,6 @@ function showOptionItens(categoria) {
     var bonus_select = document.getElementById("bonus_select");
 
     removeOptions(item_select);
-    removeOptions(bonus_select);
 
     //popula novamente o select de item
     var categoria_array = item_imbuing[categoria].itens;
@@ -267,14 +266,6 @@ function showOptionItens(categoria) {
         option.text = key;
         option.value = categoria_array[key]["value-option"];
         item_select.add(option);
-    }
-
-    var bonus_type_array = item_imbuing[categoria].bonus;
-    for (var key of Object.keys(bonus_type_array)) {
-        var option = document.createElement("option");
-        option.text = key;
-        option.value = bonus_type_array[key];
-        bonus_select.add(option);
     }
 
     changeItem();
@@ -293,6 +284,7 @@ function changeItem() {
 
 //remove as opções (<option></option>) de um select qualquer (<select></select>)
 function removeOptions(selectbox) {
+    console.log(selectbox)
     var i;
     for (i = selectbox.options.length - 1; i >= 0; i--) {
         selectbox.remove(i);

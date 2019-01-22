@@ -14,68 +14,73 @@
 
 <body>
 
-    <div class="container">
-        <form>
-            <div style="width:65%;float: left">
-                <h1 class="centerh1">Imbuing System</h1>
+    <form style="margin:auto;height: 500px;">
+        <div style="width:55%;float: left">
+            <h1 class="centerh1">Imbuing System</h1>
 
-                <div class="row">
-                    <div class="col">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
-                            </div>
-                            <select class="custom-select" id="categoria_select" onchange="categoriaChange()">
-                                <option selected value="none"></option>
-                                <option value="armor">Armaduras/Armors</option>
-                                <option value="backpack">Mochila/Backpacks</option>
-                                <option value="boots">Botas/Boots</option>
-                                <option value="helmet">Capacetes/Helmets</option>
-                                <option value="club">Clavas/Clubs</option>
-                                <option value="distance">Distância/Distance</option>
-                                <option value="shield">Escudo/Shield</option>
-                                <option value="sword">Espada/Sword</option>
-                                <option value="axe">Machado/Axe</option>
-                                <option value="spellbook">Livro de Magia/SpellBooks</option>
-                                <option value="wandRod">Wands e Rods</option>
-
-                            </select>
+            <div class="row">
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
                         </div>
-                    </div>
-                    <div class="col">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Item</label>
-                            </div>
-                            <select class="custom-select" id="item_select" disabled onchange="changeItem()">
-                            </select>
-                        </div>
-                    </div>
-                    <div id="itemImg" class="image">
+                        <select class="custom-select" id="categoria_select" onchange="categoriaChange()">
+                            <option selected value="none"></option>
+                            <option value="armor">Armaduras/Armors</option>
+                            <option value="backpack">Mochila/Backpacks</option>
+                            <option value="boots">Botas/Boots</option>
+                            <option value="helmet">Capacetes/Helmets</option>
+                            <option value="club">Clavas/Clubs</option>
+                            <option value="distance">Distância/Distance</option>
+                            <option value="shield">Escudo/Shield</option>
+                            <option value="sword">Espada/Sword</option>
+                            <option value="axe">Machado/Axe</option>
+                            <option value="spellbook">Livro de Magia/SpellBooks</option>
+                            <option value="wandRod">Wands e Rods</option>
 
-                    </div>
-                </div>
-                <h4  class="centerh1">Opções para Imbuir/Imbuing options</h2>
-                <div class="row">
-                    <div class="col">
-                        <select class="custom-select" id="bonus_select" onchange="" size="3">
-                        </select>
-                    </div>
-                    <div class="col">
-                        <select class="custom-select" id="imbue_select" size="3" onchange="">
-                            <option selected value="basic_lich">Basic Lich Shroud</option>
-                            <option value="intricate_lich">Intricate Lich Shroud (Premium)</option>
-                            <option value="powerful_lich">Powerful Lich Shroud (Premium)</option>
                         </select>
                     </div>
                 </div>
-            </div>
-            <div style="width:35%; float: left">
-                <h1 class="centerh1">Set Completo</h1>
-            </div>
-        </form>
+                <div class="col">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Item</label>
+                        </div>
+                        <select class="custom-select" id="item_select" disabled onchange="changeItem()">
+                        </select>
+                    </div>
+                </div>
+                <div id="itemImg" class="image">
 
-    </div>
+                </div>
+            </div>
+            <h4 class="centerh1">Opções para Imbuir/Imbue Options</h4>
+            <div style="text-align:center">
+                <label class="radio-inline">
+                    <input class="radio-imbue" type="radio" name="optradio" checked>Basic Lich Shroud
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-imbue" type="radio" name="optradio">Intricate Lich Shroud <b>(Premium)</b>
+                </label>
+                <label class="radio-inline">
+                    <input class="radio-imbue" type="radio" name="optradio">Powerful Lich Shroud <b>(Premium)</b>
+                </label>
+            </div>
+            <div class="container-bonus">
+                <div class="block selected"><div>ola</div><p>5% earth reduction</p></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+        </div>
+        <div style="width:45%; float: left">
+            <h1 class="centerh1">Set Completo</h1>
+        </div>
+    </form>
+
 
     <script src="index.js"></script>
 

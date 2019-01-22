@@ -17,6 +17,59 @@ h1{
     margin-top: 3px;
     height: 32px;
     width: 32px;
-    float:left;
-    border: 1px solid black"
+    float: left;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: hsl(0, 0%, 71%);
+}
+.radio-inline{
+    padding-right: 5px;
+}
+
+input.radio-imbue{
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.container-bonus {
+    display:                 flex;
+    display:                 -webkit-flex; /* Safari 8 */
+    flex-wrap:               wrap;
+    -webkit-flex-wrap:       wrap;         /* Safari 8 */
+    justify-content:         center;
+    -webkit-justify-content: center;       /* Safari 8 */
+  }
+  
+.block {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    cursor: pointer;  
+    box-shadow: 0 9px 5px #999;      
+}
+
+.block:hover {
+    border: 1px solid #777;
+    opacity: 0.75;
+}
+.block:active {
+    box-shadow: 0 2px 5px #666;
+    transform: translateY(4px);
+  }
+.block div{
+    margin: auto;
+    margin-top: 3px;
+    height: 32px;
+    width: 32px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.block p {
+    text-align: center;
+    padding: 5px;
+}
+input.radio-imbue:hover{
+    background-color: #ccc;
 }
