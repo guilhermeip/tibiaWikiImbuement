@@ -90,12 +90,50 @@ const item_imbuing = {
                 "value-option": "prismatic_armor"
             },
         },
-        "bonus": {
-            "Roubo de vida/Life Leech": "life_leech", "Redução dano Death/Death reduction": "death_reduction",
-            "Redução dano Terra/Eath reduction": "earth_reduction", "Redução dano Fogo/Fire reduction": "fire_reduction",
-            "Redução dano gelo/Ice reduction": "ice_reduction", "Redução dano energia/Energy reduction": "energy_reduction",
-            "Redução dano sagrado/Holy reduction": "holy_reduction"
-        }
+        "bonus": [
+            {
+                "image": "",
+                "bonus-msg": "Life Leech",
+                "bonus-percent-value": [5, 10, 25],
+                "bonus-title": "Roubo de vida"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Death reduction",
+                "bonus-percent-value": [2, 5, 10],
+                "bonus-title": "Redução dano Death"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Earth reduction",
+                "bonus-percent-value": [3, 8, 15],
+                "bonus-title": "Redução dano Terra"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Fire reduction",
+                "bonus-percent-value": [3, 8, 15],
+                "bonus-title": "Redução dano Fogo"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Ice reduction",
+                "bonus-percent-value": [3, 8, 15],
+                "bonus-title": "Redução dano gelo"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Energy reduction",
+                "bonus-percent-value": [3, 8, 15],
+                "bonus-title": "Redução dano energia"
+            },
+            {
+                "image": "",
+                "bonus-msg": "Holy reduction",
+                "bonus-percent-value": [3, 8, 15],
+                "bonus-title": "Redução dano sagrado"
+            }
+        ]
     },
     "backpack": {
         "itens": {
@@ -229,33 +267,78 @@ const item_imbuing = {
 
 
 var current_item = {};
-
+var imbue_type = "basic";
 
 /*Função que verifica se está selecionada uma categoria válida, se sim chama a função para exibir os itens
 da respectiva categoria.*/
-
-
 function categoriaChange() {
     const categoria_select = document.getElementById("categoria_select");
     var item_select = document.getElementById("item_select");
-    var bonus_select = document.getElementById("bonus_select");
 
     if (categoria_select.value != "none") {
         item_select.disabled = false;
         showOptionItens(categoria_select.value);
+        showBonusImbue(categoria_select.value);
     }
     else {
         item_select.disabled = true;
         removeOptions(item_select);
-        removeOptions(bonus_select);
         document.getElementById("itemImg").style = "background-image= none";
+        removeAllElementsDiv(document.getElementById("divBonus"));
     }
 }
+
+function bonusRadioChange(imbueType) {
+    var categoria = document.getElementById("categoria_select").value;
+    imbue_type = imbueType;
+
+    showBonusImbue(categoria);
+}
+
+function showBonusImbue(categoria) {
+    var divBonus = document.getElementById("divBonus");
+    var bonus = item_imbuing[categoria].bonus;
+
+    removeAllElementsDiv(divBonus);
+
+    for (var i in bonus) {
+        var div_block = document.createElement("div");
+        var div_inner_block = document.createElement("div");
+        var p = document.createElement("p");
+
+        var bonus_percent_value;
+        switch (imbue_type) {
+            case 'basic': {
+                bonus_percent_value = bonus[i]["bonus-percent-value"][0];
+                break;
+            }
+            case 'intricate': {
+                bonus_percent_value = bonus[i]["bonus-percent-value"][1];
+                break;
+            }
+            case 'powerful': {
+                bonus_percent_value = bonus[i]["bonus-percent-value"][2];
+                break;
+            }
+        }
+        //adicionando texto do bonus
+        p.textContent = bonus_percent_value + "% " + bonus[i]["bonus-msg"];
+        //adicionando imagem
+        div_inner_block.style.backgroundImage = bonus[i].image;
+        //add divs e p
+        div_block.appendChild(div_inner_block);
+        div_block.appendChild(p);
+        div_block.classList.toggle("block");
+        div_block.title = bonus[i]["bonus-title"];
+        divBonus.appendChild(div_block);
+    }
+
+}
+
 
 //Função que adiciona os itens (no select), de acordo com a categoria
 function showOptionItens(categoria) {
     var item_select = document.getElementById("item_select");
-    var bonus_select = document.getElementById("bonus_select");
 
     removeOptions(item_select);
 
@@ -269,7 +352,9 @@ function showOptionItens(categoria) {
     }
 
     changeItem();
+
 }
+
 
 function changeItem() {
     const categoria_select = document.getElementById("categoria_select");
@@ -278,15 +363,20 @@ function changeItem() {
     const itemImg = document.getElementById("itemImg");
     current_item = item_imbuing[categoria_select.value].itens[opt_item_select.text];
 
-    itemImg.style = "background-image: url(" + current_item.image + ")"
+    itemImg.style = "background-image: url(" + current_item.image + ")";
 }
 
 
 //remove as opções (<option></option>) de um select qualquer (<select></select>)
 function removeOptions(selectbox) {
-    console.log(selectbox)
     var i;
     for (i = selectbox.options.length - 1; i >= 0; i--) {
         selectbox.remove(i);
+    }
+}
+
+function removeAllElementsDiv(div) {
+    while (div.firstChild) {
+        div.removeChild(div.firstChild);
     }
 }

@@ -15,11 +15,10 @@
 <body>
 
     <form style="margin:auto;height: 500px;">
-        <div style="width:55%;float: left">
+        <div style="width:55%;float: left;">
             <h1 class="centerh1">Imbuing System</h1>
-
             <div class="row">
-                <div class="col">
+                <div class="col-5">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
@@ -37,11 +36,10 @@
                             <option value="axe">Machado/Axe</option>
                             <option value="spellbook">Livro de Magia/SpellBooks</option>
                             <option value="wandRod">Wands e Rods</option>
-
                         </select>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-5">
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <label class="input-group-text" for="inputGroupSelect01">Item</label>
@@ -50,30 +48,23 @@
                         </select>
                     </div>
                 </div>
-                <div id="itemImg" class="image">
-
+                <div class="col">
+                    <div id="itemImg" class="image"></div>
                 </div>
             </div>
             <h4 class="centerh1">Opções para Imbuir/Imbue Options</h4>
             <div style="text-align:center">
                 <label class="radio-inline">
-                    <input class="radio-imbue" type="radio" name="optradio" checked>Basic Lich Shroud
+                    <input class="radio-imbue" value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic Lich Shroud
                 </label>
                 <label class="radio-inline">
-                    <input class="radio-imbue" type="radio" name="optradio">Intricate Lich Shroud <b>(Premium)</b>
+                    <input class="radio-imbue" value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate Lich Shroud <b>(Premium)</b>
                 </label>
                 <label class="radio-inline">
-                    <input class="radio-imbue" type="radio" name="optradio">Powerful Lich Shroud <b>(Premium)</b>
+                    <input class="radio-imbue" value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful Lich Shroud <b>(Premium)</b>
                 </label>
             </div>
-            <div class="container-bonus">
-                <div class="block selected"><div>ola</div><p>5% earth reduction</p></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
-                <div class="block"></div>
+            <div id="divBonus" class="container-bonus">
             </div>
         </div>
         <div style="width:45%; float: left">
