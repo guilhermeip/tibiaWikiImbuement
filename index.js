@@ -1,3 +1,195 @@
+const bonus_type = {
+    "life_leech": {
+        "image": "",
+        "bonus-msg": "Life Leech",
+        "bonus-percent-value": [5, 10, 25],
+        "bonus-title": "Roubo de vida",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
+                "title": "Vampire Teeth"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
+                "amount": "15",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
+                "title": "Bloody Pincers"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
+                "title": "Piece of Dead Brain"
+            }
+        }
+    },
+    "death_reduction": {
+        "image": "https://tibiawiki.com.br/images/e/e6/Cursed_Flash_Icon.gif",
+        "bonus-msg": "Death reduction",
+        "bonus-percent-value": [2, 5, 10],
+        "bonus-title": "Redução dano Death",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/c/c2/Flask_of_Embalming_Fluid.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Flask_of_Embalming_Fluid",
+                "title": "Flask of Embalming Fluid"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/f/ff/Gloom_Wolf_Fur.gif",
+                "amount": "20",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Gloom_Wolf_Fur",
+                "title": "Gloom Wolf Fur"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/0/08/Mystical_Hourglass.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Mystical_Hourglass",
+                "title": "Mystical Hourglass"
+            },
+        },
+    },
+    "earth_reduction": {
+        "image": "",
+        "bonus-msg": "Earth reduction",
+        "bonus-percent-value": [3, 8, 15],
+        "bonus-title": "Redução dano Terra",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/f/f6/Piece_of_Swampling_Wood.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Swampling_Wood",
+                "title": "Piece of Swampling Wood"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/3/3e/Snake_Skin.gif",
+                "amount": "20",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Snake_Skin",
+                "title": "Snake Skin"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/7/7a/Brimstone_Fangs.gif",
+                "amount": "10",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Brimstone_Fangs",
+                "title": "Brimstone Fangs"
+            },
+        },
+    },
+    "fire_reduction": {
+        "image": "https://www.tibiawiki.com.br/images/9/95/Burning_Flash_Icon.gif",
+        "bonus-msg": "Fire reduction",
+        "bonus-percent-value": [3, 8, 15],
+        "bonus-title": "Redução dano Fogo",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/d/d9/Green_Dragon_Leather.gif",
+                "amount": "20",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Green_Dragon_Leather",
+                "title": "Green Dragon Leather"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/0/01/Blazing_Bone.gif",
+                "amount": "10",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Blazing_Bone",
+                "title": "Blazing Bone"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/5/51/Draken_Sulphur.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Draken_Sulphur",
+                "title": "Draken Sulphur"
+            },
+        },
+    },
+    "ice_reduction": {
+        "image": "https://tibiawiki.com.br/images/7/7d/Freezing_Flash_Icon.gif",
+        "bonus-msg": "Ice reduction",
+        "bonus-percent-value": [3, 8, 15],
+        "bonus-title": "Redução dano gelo",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
+                "title": "Vampire Teeth"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
+                "amount": "15",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
+                "title": "Bloody Pincers"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
+                "title": "Piece of Dead Brain"
+            },
+        },
+    },
+    "energy_reduction": {
+        "image": "https://www.tibiawiki.com.br/images/f/f4/Electrified_Flash_Icon.gif",
+        "bonus-msg": "Energy reduction",
+        "bonus-percent-value": [3, 8, 15],
+        "bonus-title": "Redução dano energia",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
+                "title": "Vampire Teeth"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
+                "amount": "15",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
+                "title": "Bloody Pincers"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
+                "title": "Piece of Dead Brain"
+            }
+        },
+    },
+    "holy_reduction": {
+        "image": "https://www.tibiawiki.com.br/images/9/98/Dazzled_Flash_Icon.gif",
+        "bonus-msg": "Holy reduction",
+        "bonus-percent-value": [3, 8, 15],
+        "bonus-title": "Redução dano sagrado",
+        "imbue_type": {
+            "basic": {
+                "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
+                "amount": "25",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
+                "title": "Vampire Teeth"
+
+            },
+            "intricate": {
+                "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
+                "amount": "15",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
+                "title": "Bloody Pincers"
+            },
+            "powerful": {
+                "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
+                "amount": "5",
+                "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
+                "title": "Piece of Dead Brain"
+            }
+        },
+    },
+}
+
 const item_imbuing = {
     "armor": {
         "itens": {
@@ -91,49 +283,14 @@ const item_imbuing = {
             },
         },
         "bonus": [
-            {
-                "image": "",
-                "bonus-msg": "Life Leech",
-                "bonus-percent-value": [5, 10, 25],
-                "bonus-title": "Roubo de vida"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Death reduction",
-                "bonus-percent-value": [2, 5, 10],
-                "bonus-title": "Redução dano Death"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Earth reduction",
-                "bonus-percent-value": [3, 8, 15],
-                "bonus-title": "Redução dano Terra"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Fire reduction",
-                "bonus-percent-value": [3, 8, 15],
-                "bonus-title": "Redução dano Fogo"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Ice reduction",
-                "bonus-percent-value": [3, 8, 15],
-                "bonus-title": "Redução dano gelo"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Energy reduction",
-                "bonus-percent-value": [3, 8, 15],
-                "bonus-title": "Redução dano energia"
-            },
-            {
-                "image": "",
-                "bonus-msg": "Holy reduction",
-                "bonus-percent-value": [3, 8, 15],
-                "bonus-title": "Redução dano sagrado"
-            }
-        ]
+            bonus_type.life_leech,
+            bonus_type.death_reduction,
+            bonus_type.fire_reduction,
+            bonus_type.ice_reduction,
+            bonus_type.energy_reduction,
+            bonus_type.holy_reduction
+        ],
+
     },
     "backpack": {
         "itens": {
@@ -234,36 +391,84 @@ const item_imbuing = {
                 "value-option": "old_and_used_bp"
             },
         },
-        "bonus": {
-            "Aumento de Capacidade/Capacity Increase": "capacity_increase"
-        }
+        "bonus": [
+
+        ]
     },
     "boots": {
         "itens": {
 
         },
-        "bonus": {
-            "Aumento de Velocidade/Speed Increase": "speed_increase"
-        }
+        "bonus": [
+
+        ]
     },
     "helmet": {
         "itens": {
 
         },
-        "bonus": {
-            "Roubo de mana/Mana Leech": "mana_leech", "Aumento/Upgrade Axe Fighting": "axe_upgrade", "Aumento/Upgrade Sword Fighting ": "sword_upgrade",
-            "Aumento/Upgrade Club Fighting": "club_upgrade", "Aumento/Upgrade Distance Fighting": "distance_upgrade", "Aumento/Upgrade Shielding": "shield_upgrade",
-            "Aumento/Upgrade Magic Level": "ml_upgrade"
-        }
+        "bonus": [
+
+        ]
     },
-    "club": {},
-    "distance": {},
-    "shield": {},
-    "sword": {},
-    "axe": {},
-    "spellbook": {},
-    "wandRod": {}
+    "club": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "distance": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "shield": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "sword": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "axe": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "spellbook": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    },
+    "wandRod": {
+        "itens": {
+
+        },
+        "bonus": [
+
+        ]
+    }
 }
+
 
 
 var current_item = {};
@@ -324,17 +529,26 @@ function showBonusImbue(categoria) {
         //adicionando texto do bonus
         p.textContent = bonus_percent_value + "% " + bonus[i]["bonus-msg"];
         //adicionando imagem
-        div_inner_block.style.backgroundImage = bonus[i].image;
+        div_inner_block.style.backgroundImage = "url(" + bonus[i].image + ")";
         //add divs e p
+        div_block.onclick = function () { bonus_selected(this) }
         div_block.appendChild(div_inner_block);
         div_block.appendChild(p);
-        div_block.classList.toggle("block");
+        div_block.classList.add("block");
         div_block.title = bonus[i]["bonus-title"];
         divBonus.appendChild(div_block);
     }
 
 }
 
+function bonus_selected(element) {
+    var chieldrens = document.getElementsByClassName("selected");
+    Array.prototype.slice.call(chieldrens).forEach((element) => {
+        element.classList.remove("selected");
+    });
+    element.classList.add("selected");
+    
+}
 
 //Função que adiciona os itens (no select), de acordo com a categoria
 function showOptionItens(categoria) {

@@ -53,23 +53,31 @@ input.radio-imbue{
     border: 1px solid #777;
     opacity: 0.75;
 }
-.block:active {
-    box-shadow: 0 2px 5px #666;
+
+.block.selected {
+    opacity: 0.75;
+    box-shadow: 0 5px 5px #999;
     transform: translateY(4px);
-  }
+}
 .block div{
     margin: auto;
     margin-top: 3px;
     height: 32px;
     width: 32px;
+    background-size: cover;
     border: 1px solid black;
     border-radius: 5px;
 }
 
 .block p {
     text-align: center;
-    padding: 5px;
+    padding: 2px;
 }
 input.radio-imbue:hover{
     background-color: #ccc;
+}
+#divBonusDetails {
+    max-height: 250px;
+    overflow: auto;
+    margin: 10px;
 }

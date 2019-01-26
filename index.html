@@ -15,61 +15,69 @@
 <body>
 
     <form style="margin:auto;height: 500px;">
-        <div style="width:55%;float: left;">
-            <h1 class="centerh1">Imbuing System</h1>
-            <div class="row">
-                <div class="col-5">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+        <div class="row">
+            <div class="col-7">
+                <h1 class="centerh1">Imbuing System</h1>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+                            </div>
+                            <select class="custom-select" id="categoria_select" onchange="categoriaChange()">
+                                <option selected value="none"></option>
+                                <option value="armor">Armaduras/Armors</option>
+                                <option value="backpack">Mochila/Backpacks</option>
+                                <option value="boots">Botas/Boots</option>
+                                <option value="helmet">Capacetes/Helmets</option>
+                                <option value="club">Clavas/Clubs</option>
+                                <option value="distance">Distância/Distance</option>
+                                <option value="shield">Escudo/Shield</option>
+                                <option value="sword">Espada/Sword</option>
+                                <option value="axe">Machado/Axe</option>
+                                <option value="spellbook">Livro de Magia/SpellBooks</option>
+                                <option value="wandRod">Wands e Rods</option>
+                            </select>
                         </div>
-                        <select class="custom-select" id="categoria_select" onchange="categoriaChange()">
-                            <option selected value="none"></option>
-                            <option value="armor">Armaduras/Armors</option>
-                            <option value="backpack">Mochila/Backpacks</option>
-                            <option value="boots">Botas/Boots</option>
-                            <option value="helmet">Capacetes/Helmets</option>
-                            <option value="club">Clavas/Clubs</option>
-                            <option value="distance">Distância/Distance</option>
-                            <option value="shield">Escudo/Shield</option>
-                            <option value="sword">Espada/Sword</option>
-                            <option value="axe">Machado/Axe</option>
-                            <option value="spellbook">Livro de Magia/SpellBooks</option>
-                            <option value="wandRod">Wands e Rods</option>
-                        </select>
+                    </div>
+                    <div class="col-5">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="inputGroupSelect01">Item</label>
+                            </div>
+                            <select class="custom-select" id="item_select" disabled onchange="changeItem()">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div id="itemImg" class="image"></div>
                     </div>
                 </div>
-                <div class="col-5">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01">Item</label>
-                        </div>
-                        <select class="custom-select" id="item_select" disabled onchange="changeItem()">
-                        </select>
-                    </div>
+                <h4 class="centerh1">Opções para Imbuir/Imbue Options</h4>
+                <div style="text-align:center">
+                    <label class="radio-inline">
+                        <input class="radio-imbue" value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic
+                        Lich Shroud
+                    </label>
+                    <label class="radio-inline">
+                        <input class="radio-imbue" value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate
+                        Lich Shroud <b>(Premium)</b>
+                    </label>
+                    <label class="radio-inline">
+                        <input class="radio-imbue" value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful
+                        Lich Shroud <b>(Premium)</b>
+                    </label>
                 </div>
-                <div class="col">
-                    <div id="itemImg" class="image"></div>
+                <div id="divBonus" class="container-bonus">
+                </div>
+                <div id="divBonusDetails">
                 </div>
             </div>
-            <h4 class="centerh1">Opções para Imbuir/Imbue Options</h4>
-            <div style="text-align:center">
-                <label class="radio-inline">
-                    <input class="radio-imbue" value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic Lich Shroud
-                </label>
-                <label class="radio-inline">
-                    <input class="radio-imbue" value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate Lich Shroud <b>(Premium)</b>
-                </label>
-                <label class="radio-inline">
-                    <input class="radio-imbue" value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful Lich Shroud <b>(Premium)</b>
-                </label>
-            </div>
-            <div id="divBonus" class="container-bonus">
+            <div class="col">
+                <h1 class="centerh1">Set Completo</h1>
             </div>
         </div>
-        <div style="width:45%; float: left">
-            <h1 class="centerh1">Set Completo</h1>
-        </div>
+
     </form>
 
 
