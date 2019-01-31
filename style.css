@@ -1,3 +1,6 @@
+* {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
 .centerh1{
     text-align: center; 
     margin-bottom: 15px;
@@ -25,9 +28,8 @@ h1{
     padding-right: 5px;
 }
 
-input.radio-imbue{
+.radio-imbue{
     cursor: pointer;
-    background-color: #eee;
 }
 
 .container-bonus {
@@ -37,7 +39,9 @@ input.radio-imbue{
     -webkit-flex-wrap:       wrap;         /* Safari 8 */
     justify-content:         center;
     -webkit-justify-content: center;       /* Safari 8 */
-  }
+    height: 110px;
+    overflow: auto;
+}
   
 .block {
     width: 100px;
@@ -55,11 +59,16 @@ input.radio-imbue{
 }
 
 .block.selected {
+    border: 1px solid black;
     opacity: 0.75;
     box-shadow: 0 5px 5px #999;
     transform: translateY(4px);
 }
-.block div{
+.block p {
+    text-align: center;
+    padding: 2px;
+}
+.block div, .fig32{
     margin: auto;
     margin-top: 3px;
     height: 32px;
@@ -69,15 +78,55 @@ input.radio-imbue{
     border-radius: 5px;
 }
 
-.block p {
-    text-align: center;
-    padding: 2px;
-}
-input.radio-imbue:hover{
-    background-color: #ccc;
-}
 #divBonusDetails {
     max-height: 250px;
     overflow: auto;
     margin: 10px;
+}
+
+.divMoneyOval {
+    border: 2px solid black;
+    box-shadow: 0 0 10px red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.protectionCharm {
+    background-color: white;
+    border: 1px solid red;
+    font-size: 1vw;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.protectionCharm:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+
+.divMoneyRect {
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px red;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    
+}
+td {
+    vertical-align: center;
+    text-align: center;
+    width: 20%;
 }

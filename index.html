@@ -56,22 +56,78 @@
                 <h4 class="centerh1">Opções para Imbuir/Imbue Options</h4>
                 <div style="text-align:center">
                     <label class="radio-inline">
-                        <input class="radio-imbue" value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic
-                        Lich Shroud
+                        <div class="radio-imbue">
+                            <input value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic
+                            Lich Shroud
+                        </div>
                     </label>
                     <label class="radio-inline">
-                        <input class="radio-imbue" value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate
-                        Lich Shroud <b>(Premium)</b>
+                        <div class="radio-imbue">
+                            <input value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate
+                            Lich Shroud <b>(Premium)</b>
+                        </div>
+
                     </label>
                     <label class="radio-inline">
-                        <input class="radio-imbue" value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful
-                        Lich Shroud <b>(Premium)</b>
+                        <div class="radio-imbue">
+                            <input value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful
+                            Lich Shroud <b>(Premium)</b>
+                        </div>
+
                     </label>
                 </div>
                 <div id="divBonus" class="container-bonus">
                 </div>
                 <div id="divBonusDetails">
                 </div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="item1" class="fig32"></div>
+                            </td>
+                            <td>
+                                <div id="item2" class="fig32"></div>
+                            </td>
+                            <td>
+                                <div id="item3" class="fig32"></div>
+                            </td>
+                            <td>
+                                <p class="protectionCharm" style="margin: 0">Protection Charm</p>
+                            </td>
+                            <td>
+                                <p style="margin: 0">Total</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="quant_item1" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="quant_item2" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="quant_item3" class="divMoneyOval">
+                                    0
+                                </div>
+                            </td>
+                            <td>
+                                <div id="protectMoney" class="divMoneyRect">
+                                    10000
+                                </div>
+                            </td>
+                            <td>
+                                <div id="totalMoney" class="divMoneyRect">
+                                    5000
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="col">
                 <h1 class="centerh1">Set Completo</h1>

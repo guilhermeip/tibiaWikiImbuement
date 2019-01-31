@@ -1,7 +1,8 @@
 const bonus_type = {
     "life_leech": {
+        "name": "life_leech",
         "image": "",
-        "bonus-msg": "Life Leech",
+        "bonus-msg-small": "Life Leech",
         "bonus-percent-value": [5, 10, 25],
         "bonus-title": "Roubo de vida",
         "imbue_type": {
@@ -27,8 +28,9 @@ const bonus_type = {
         }
     },
     "death_reduction": {
+        "name": "death_reduction",
         "image": "https://tibiawiki.com.br/images/e/e6/Cursed_Flash_Icon.gif",
-        "bonus-msg": "Death reduction",
+        "bonus-msg-small": "Death reduction",
         "bonus-percent-value": [2, 5, 10],
         "bonus-title": "Redução dano Death",
         "imbue_type": {
@@ -54,8 +56,9 @@ const bonus_type = {
         },
     },
     "earth_reduction": {
+        "name": "earth_reduction",
         "image": "",
-        "bonus-msg": "Earth reduction",
+        "bonus-msg-small": "Earth reduction",
         "bonus-percent-value": [3, 8, 15],
         "bonus-title": "Redução dano Terra",
         "imbue_type": {
@@ -81,8 +84,9 @@ const bonus_type = {
         },
     },
     "fire_reduction": {
+        "name": "fire_reduction",
         "image": "https://www.tibiawiki.com.br/images/9/95/Burning_Flash_Icon.gif",
-        "bonus-msg": "Fire reduction",
+        "bonus-msg-small": "Fire reduction",
         "bonus-percent-value": [3, 8, 15],
         "bonus-title": "Redução dano Fogo",
         "imbue_type": {
@@ -108,8 +112,9 @@ const bonus_type = {
         },
     },
     "ice_reduction": {
+        "name": "ice_reduction",
         "image": "https://tibiawiki.com.br/images/7/7d/Freezing_Flash_Icon.gif",
-        "bonus-msg": "Ice reduction",
+        "bonus-msg-small": "Ice reduction",
         "bonus-percent-value": [3, 8, 15],
         "bonus-title": "Redução dano gelo",
         "imbue_type": {
@@ -135,8 +140,9 @@ const bonus_type = {
         },
     },
     "energy_reduction": {
+        "name": "energy_reduction",
         "image": "https://www.tibiawiki.com.br/images/f/f4/Electrified_Flash_Icon.gif",
-        "bonus-msg": "Energy reduction",
+        "bonus-msg-small": "Energy reduction",
         "bonus-percent-value": [3, 8, 15],
         "bonus-title": "Redução dano energia",
         "imbue_type": {
@@ -162,8 +168,9 @@ const bonus_type = {
         },
     },
     "holy_reduction": {
+        "name": "holy_reduction",
         "image": "https://www.tibiawiki.com.br/images/9/98/Dazzled_Flash_Icon.gif",
-        "bonus-msg": "Holy reduction",
+        "bonus-msg-small": "Holy reduction",
         "bonus-percent-value": [3, 8, 15],
         "bonus-title": "Redução dano sagrado",
         "imbue_type": {
@@ -497,6 +504,31 @@ function bonusRadioChange(imbueType) {
     var categoria = document.getElementById("categoria_select").value;
     imbue_type = imbueType;
 
+    switch (imbueType) {
+        case 'basic': {
+            document.getElementById("protectMoney").textContent = "10000";
+            document.getElementById("totalMoney").textContent = "5000";
+            break;
+        }
+        case 'intricate': {
+            document.getElementById("protectMoney").textContent = "30000";
+            document.getElementById("totalMoney").textContent = "25000";
+            break;
+        } 
+        case 'powerful': {
+            document.getElementById("protectMoney").textContent = "50000";
+            document.getElementById("totalMoney").textContent = "100000";
+            break;
+        }
+
+    }
+    document.getElementById("totalMoney");
+    document.getElementById("item1").style.backgroundImage = "none";
+    document.getElementById("item2").style.backgroundImage = "none";
+    document.getElementById("item3").style.backgroundImage = "none";
+    document.getElementById("quant_item1").textContent = "0";
+    document.getElementById("quant_item2").textContent = "0";
+    document.getElementById("quant_item3").textContent = "0";
     showBonusImbue(categoria);
 }
 
@@ -527,11 +559,12 @@ function showBonusImbue(categoria) {
             }
         }
         //adicionando texto do bonus
-        p.textContent = bonus_percent_value + "% " + bonus[i]["bonus-msg"];
+        p.textContent = bonus_percent_value + "% " + bonus[i]["bonus-msg-small"];
         //adicionando imagem
         div_inner_block.style.backgroundImage = "url(" + bonus[i].image + ")";
         //add divs e p
         div_block.onclick = function () { bonus_selected(this) }
+        div_block.dataset.type = bonus[i].name;
         div_block.appendChild(div_inner_block);
         div_block.appendChild(p);
         div_block.classList.add("block");
@@ -543,13 +576,57 @@ function showBonusImbue(categoria) {
 
 function bonus_selected(element) {
     var chieldrens = document.getElementsByClassName("selected");
-    Array.prototype.slice.call(chieldrens).forEach((element) => {
+    Array.prototype.slice.call(chieldrens).forEach(function (element) {
         element.classList.remove("selected");
     });
     element.classList.add("selected");
-    
+    showItensForImbue(element);
+
 }
 
+function showItensForImbue(div_block_selected) {
+    //itens necessarios para imbuir
+    var itensForImbue1 = document.getElementById("item1");
+    var itensForImbue2 = document.getElementById("item2");
+    var itensForImbue3 = document.getElementById("item3");
+    //quantidade dos items
+    var itensForImbue1_1 = document.getElementById("quant_item1");
+    var itensForImbue2_2 = document.getElementById("quant_item2");
+    var itensForImbue3_3 = document.getElementById("quant_item3");
+
+    switch (imbue_type) {
+        case 'basic': {
+            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
+            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
+            itensForImbue2.style.backgroundImage = "none";
+            itensForImbue2_2.textContent = "0";
+            itensForImbue3.style.backgroundImage = "none";
+            itensForImbue3_3.textContent = "0";
+            break;
+        }
+        case 'intricate': {
+            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['basic'].image + ")";
+            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['basic'].amount;
+            itensForImbue2.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
+            itensForImbue2_2.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
+            itensForImbue3.style.backgroundImage = "none";
+            itensForImbue3_3.textContent = "0";
+            break;
+        }
+        case 'powerful': {
+            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['basic'].image + ")";
+            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['basic'].amount;
+            itensForImbue2.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
+            itensForImbue2_2.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['intricate'].amount;
+            itensForImbue3.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['intricate'].image + ")";
+            itensForImbue3_3.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
+
+            break;
+        }
+    }
+
+
+}
 //Função que adiciona os itens (no select), de acordo com a categoria
 function showOptionItens(categoria) {
     var item_select = document.getElementById("item_select");
