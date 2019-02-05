@@ -2,11 +2,11 @@ const bonus_type = {
     "life_leech": {
         "name": "life_leech",
         "image": "",
-        "bonus-msg-small": "Life Leech",
-        "bonus-percent-value": [5, 10, 25],
+        "bonus-msg-small": "% Life Leech",
         "bonus-title": "Roubo de vida",
         "imbue_type": {
             "basic": {
+                "bonus-value": 5,
                 "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
@@ -14,12 +14,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 10,
                 "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
                 "amount": "15",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
                 "title": "Bloody Pincers"
             },
             "powerful": {
+                "bonus-value": 25,
                 "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
@@ -30,11 +32,11 @@ const bonus_type = {
     "death_reduction": {
         "name": "death_reduction",
         "image": "https://tibiawiki.com.br/images/e/e6/Cursed_Flash_Icon.gif",
-        "bonus-msg-small": "Death reduction",
-        "bonus-percent-value": [2, 5, 10],
+        "bonus-msg-small": "% Death reduction",
         "bonus-title": "Redução dano Death",
         "imbue_type": {
             "basic": {
+                "bonus-value": 2,
                 "image": "https://www.tibiawiki.com.br/images/c/c2/Flask_of_Embalming_Fluid.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Flask_of_Embalming_Fluid",
@@ -42,12 +44,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 5,
                 "image": "https://www.tibiawiki.com.br/images/f/ff/Gloom_Wolf_Fur.gif",
                 "amount": "20",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Gloom_Wolf_Fur",
                 "title": "Gloom Wolf Fur"
             },
             "powerful": {
+                "bonus-value": 10,
                 "image": "https://www.tibiawiki.com.br/images/0/08/Mystical_Hourglass.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Mystical_Hourglass",
@@ -58,11 +62,11 @@ const bonus_type = {
     "earth_reduction": {
         "name": "earth_reduction",
         "image": "",
-        "bonus-msg-small": "Earth reduction",
-        "bonus-percent-value": [3, 8, 15],
+        "bonus-msg-small": "% Earth reduction",
         "bonus-title": "Redução dano Terra",
         "imbue_type": {
             "basic": {
+                "bonus-value": 3,
                 "image": "https://www.tibiawiki.com.br/images/f/f6/Piece_of_Swampling_Wood.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Swampling_Wood",
@@ -70,12 +74,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 8,
                 "image": "https://www.tibiawiki.com.br/images/3/3e/Snake_Skin.gif",
                 "amount": "20",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Snake_Skin",
                 "title": "Snake Skin"
             },
             "powerful": {
+                "bonus-value": 15,
                 "image": "https://www.tibiawiki.com.br/images/7/7a/Brimstone_Fangs.gif",
                 "amount": "10",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Brimstone_Fangs",
@@ -86,11 +92,11 @@ const bonus_type = {
     "fire_reduction": {
         "name": "fire_reduction",
         "image": "https://www.tibiawiki.com.br/images/9/95/Burning_Flash_Icon.gif",
-        "bonus-msg-small": "Fire reduction",
-        "bonus-percent-value": [3, 8, 15],
+        "bonus-msg-small": "% Fire reduction",
         "bonus-title": "Redução dano Fogo",
         "imbue_type": {
             "basic": {
+                "bonus-value": 3,
                 "image": "https://www.tibiawiki.com.br/images/d/d9/Green_Dragon_Leather.gif",
                 "amount": "20",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Green_Dragon_Leather",
@@ -98,12 +104,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 8,
                 "image": "https://www.tibiawiki.com.br/images/0/01/Blazing_Bone.gif",
                 "amount": "10",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Blazing_Bone",
                 "title": "Blazing Bone"
             },
             "powerful": {
+                "bonus-value": 15,
                 "image": "https://www.tibiawiki.com.br/images/5/51/Draken_Sulphur.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Draken_Sulphur",
@@ -114,11 +122,11 @@ const bonus_type = {
     "ice_reduction": {
         "name": "ice_reduction",
         "image": "https://tibiawiki.com.br/images/7/7d/Freezing_Flash_Icon.gif",
-        "bonus-msg-small": "Ice reduction",
-        "bonus-percent-value": [3, 8, 15],
+        "bonus-msg-small": "% Ice reduction",
         "bonus-title": "Redução dano gelo",
         "imbue_type": {
             "basic": {
+                "bonus-value": 3,
                 "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
@@ -126,12 +134,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 8,
                 "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
                 "amount": "15",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
                 "title": "Bloody Pincers"
             },
             "powerful": {
+                "bonus-value": 15,
                 "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
@@ -142,11 +152,11 @@ const bonus_type = {
     "energy_reduction": {
         "name": "energy_reduction",
         "image": "https://www.tibiawiki.com.br/images/f/f4/Electrified_Flash_Icon.gif",
-        "bonus-msg-small": "Energy reduction",
-        "bonus-percent-value": [3, 8, 15],
+        "bonus-msg-small": "% Energy reduction",
         "bonus-title": "Redução dano energia",
         "imbue_type": {
             "basic": {
+                "bonus-value": 3,
                 "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
@@ -154,12 +164,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 8,
                 "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
                 "amount": "15",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
                 "title": "Bloody Pincers"
             },
             "powerful": {
+                "bonus-value": 15,
                 "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
@@ -170,11 +182,11 @@ const bonus_type = {
     "holy_reduction": {
         "name": "holy_reduction",
         "image": "https://www.tibiawiki.com.br/images/9/98/Dazzled_Flash_Icon.gif",
-        "bonus-msg-small": "Holy reduction",
-        "bonus-percent-value": [3, 8, 15],
+        "bonus-msg-small": "% Holy reduction",
         "bonus-title": "Redução dano sagrado",
         "imbue_type": {
             "basic": {
+                "bonus-value": 3,
                 "image": "https://www.tibiawiki.com.br/images/f/f1/Vampire_Teeth.gif",
                 "amount": "25",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Vampire_Teeth",
@@ -182,12 +194,14 @@ const bonus_type = {
 
             },
             "intricate": {
+                "bonus-value": 8,
                 "image": "https://www.tibiawiki.com.br/images/1/1d/Bloody_Pincers.gif",
                 "amount": "15",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Bloody_Pincers",
                 "title": "Bloody Pincers"
             },
             "powerful": {
+                "bonus-value": 15,
                 "image": "https://www.tibiawiki.com.br/images/8/85/Piece_of_Dead_Brain.gif",
                 "amount": "5",
                 "link-tibiaWiki": "https://www.tibiawiki.com.br/wiki/Piece_of_Dead_Brain",
@@ -196,108 +210,111 @@ const bonus_type = {
         },
     },
 }
+const bonus_group_armor = [
+    bonus_type.life_leech,
+    bonus_type.death_reduction,
+    bonus_type.fire_reduction,
+    bonus_type.ice_reduction,
+    bonus_type.energy_reduction,
+    bonus_type.holy_reduction
+]
 
 const item_imbuing = {
     "armor": {
-        "itens": {
-            "Albino Plate": {
-                "value-option": "albino_plate",
-                "image": "https://www.tibiawiki.com.br/images/9/98/Albino_Plate.gif"
-            },
-            "Amazon Armor": {
-                "value-option": "amazon_armor",
-                "image": "https://www.tibiawiki.com.br/wiki/Especial:Redirecionar/file/Amazon_Armor.gif"
-            },
-            "Blue Robe": {
-                "value-option": "blue_robe",
-                "image": ""
-            },
-            "Chain Armor": {
-                "value-option": "chain_armor",
-                "image": ""
-            },
-            "Crown Armor": {
-                "value-option": "crown_armor"
-            },
-            "Demon Armor": {
-                "value-option": "demon_armor"
-            },
-            "Depth Lorica": {
-                "value-option": "depth_lorica"
-            },
-            "Dragon Scale Mail": {
-                "value-option": "dragon_scale_mail"
-            },
-            "Dream Shroud": {
-                "value-option": "dream_shroud"
-            },
-            "Dwarven Armor": {
-                "value-option": "dwarven_armor"
-            },
-            "Elite Draken Mail": {
-                "value-option": "elite_draken_mail"
-            },
-            "Elven Mail": {
-                "value-option": "elven_mail"
-            },
-            "Falcon Plate": {
-                "value-option": "falcon_plate"
-            },
-            "Gnome Armor": {
-                "value-option": "gnome_armor"
-            },
-            "Golden Amor": {
-                "value-option": "golden_armor"
-            },
-            "Heat Core": {
-                "value-option": "heat_core"
-            },
-            "Heavy Metal T-Shirt": {
-                "value-option": "heavy_metal_t-shirt"
-            },
-            "Knight Armor": {
-                "value-option": "knight_armor"
-            },
-            "Leopard Armor": {
-                "value-option": "leopard_armor"
-            },
-            "Living Armor": {
-                "value-option": "living_armor"
-            },
-            "Magic Plate Armor": {
-                "value-option": "magic_plate_armor"
-            },
-            "Mammoth Fur Cape": {
-                "value-option": "mammoth_fur_cape"
-            },
-            "Master Archer's Armor": {
-                "value-option": "master_archers_armor"
-            },
-            "Mooh'tah Plate": {
-                "value-option": "moohtah_plate"
-            },
-            "Noble Armor": {
-                "value-option": "noble_armor"
-            },
-            "Ornate Chestplate": {
-                "value-option": "ornate_chestplate"
-            },
-            "Paladin Armor": {
-                "value-option": "paladin_armor"
-            },
-            "Prismatic Armor": {
-                "value-option": "prismatic_armor"
-            },
+        "Albino Plate": {
+            "value-option": "albino_plate",
+            "image": "https://www.tibiawiki.com.br/images/9/98/Albino_Plate.gif",
+            "bonus": bonus_group_armor,
         },
-        "bonus": [
-            bonus_type.life_leech,
-            bonus_type.death_reduction,
-            bonus_type.fire_reduction,
-            bonus_type.ice_reduction,
-            bonus_type.energy_reduction,
-            bonus_type.holy_reduction
-        ],
-
+        "Amazon Armor": {
+            "value-option": "amazon_armor",
+            "image": "https://www.tibiawiki.com.br/wiki/Especial:Redirecionar/file/Amazon_Armor.gif",
+            "bonus": bonus_group_armor,
+        },
+        "Blue Robe": {
+            "value-option": "blue_robe",
+            "image": "",
+            "bonus": bonus_group_armor,
+        },
+        "Chain Armor": {
+            "value-option": "chain_armor",
+            "image": "",
+            "bonus": bonus_group_armor,
+        },
+        "Crown Armor": {
+            "value-option": "crown_armor",
+            "bonus": bonus_group_armor,
+        },
+        "Demon Armor": {
+            "value-option": "demon_armor",
+            "bonus": bonus_group_armor,
+        },
+        "Depth Lorica": {
+            "value-option": "depth_lorica",
+        },
+        "Dragon Scale Mail": {
+            "value-option": "dragon_scale_mail"
+        },
+        "Dream Shroud": {
+            "value-option": "dream_shroud"
+        },
+        "Dwarven Armor": {
+            "value-option": "dwarven_armor"
+        },
+        "Elite Draken Mail": {
+            "value-option": "elite_draken_mail"
+        },
+        "Elven Mail": {
+            "value-option": "elven_mail"
+        },
+        "Falcon Plate": {
+            "value-option": "falcon_plate"
+        },
+        "Gnome Armor": {
+            "value-option": "gnome_armor"
+        },
+        "Golden Amor": {
+            "value-option": "golden_armor"
+        },
+        "Heat Core": {
+            "value-option": "heat_core"
+        },
+        "Heavy Metal T-Shirt": {
+            "value-option": "heavy_metal_t-shirt"
+        },
+        "Knight Armor": {
+            "value-option": "knight_armor"
+        },
+        "Leopard Armor": {
+            "value-option": "leopard_armor"
+        },
+        "Living Armor": {
+            "value-option": "living_armor"
+        },
+        "Magic Plate Armor": {
+            "value-option": "magic_plate_armor"
+        },
+        "Mammoth Fur Cape": {
+            "value-option": "mammoth_fur_cape"
+        },
+        "Master Archer's Armor": {
+            "value-option": "master_archers_armor"
+        },
+        "Mooh'tah Plate": {
+            "value-option": "moohtah_plate"
+        },
+        "Noble Armor": {
+            "value-option": "noble_armor"
+        },
+        "Ornate Chestplate": {
+            "value-option": "ornate_chestplate"
+        },
+        "Paladin Armor": {
+            "value-option": "paladin_armor"
+        },
+        "Prismatic Armor": {
+            "value-option": "prismatic_armor"
+        },
     },
     "backpack": {
         "itens": {
@@ -478,63 +495,105 @@ const item_imbuing = {
 
 
 
-var current_item = {};
-var imbue_type = "basic";
+var current_item = {
+    "categoria": "none",
+    "itemProp": "",
+    "imbueType": "basic",
+    "protectionMoney": 10000,
+    "imbuePrice": 5000,
+    "totalMoney": 15000,
+    "bonusSelected": "none",
+};
 
 /*Função que verifica se está selecionada uma categoria válida, se sim chama a função para exibir os itens
 da respectiva categoria.*/
 function categoriaChange() {
     const categoria_select = document.getElementById("categoria_select");
     var item_select = document.getElementById("item_select");
+    current_item.categoria = categoria_select.value;
 
-    if (categoria_select.value != "none") {
+    if (current_item.categoria != "none") {
         item_select.disabled = false;
-        showOptionItens(categoria_select.value);
-        showBonusImbue(categoria_select.value);
+        showOptionItens();
     }
     else {
         item_select.disabled = true;
         removeOptions(item_select);
         document.getElementById("itemImg").style = "background-image= none";
+        current_item.itemProp = "";
         removeAllElementsDiv(document.getElementById("divBonus"));
     }
 }
 
-function bonusRadioChange(imbueType) {
-    var categoria = document.getElementById("categoria_select").value;
-    imbue_type = imbueType;
+//Função que adiciona os itens (no select), de acordo com a categoria
+function showOptionItens() {
+    var item_select = document.getElementById("item_select");
 
-    switch (imbueType) {
+    removeOptions(item_select);
+
+    //popula novamente o select de item
+    var itens_categoria = item_imbuing[current_item.categoria];
+    for (var key of Object.keys(itens_categoria)) {
+        var option = document.createElement("option");
+        option.text = key;
+        option.value = itens_categoria[key]["value-option"];
+        item_select.add(option);
+    }
+    changeItem();
+}
+
+
+function changeItem() {
+    const item_select = document.getElementById("item_select");
+    const opt_item_select = item_select.options[item_select.selectedIndex];
+    const itemImg = document.getElementById("itemImg");
+    current_item.itemProp = item_imbuing[current_item.categoria][opt_item_select.text];
+
+    itemImg.style.backgroundImage = "url(" + current_item.itemProp.image + ")";
+
+    showBonusImbue();
+}
+
+function bonusRadioChange(imbueValue) {
+    current_item.imbueType = imbueValue;
+
+    switch (current_item.imbueType) {
         case 'basic': {
-            document.getElementById("protectMoney").textContent = "10000";
-            document.getElementById("totalMoney").textContent = "5000";
+            current_item.protectionMoney = 10000;
+            current_item.imbuePrice = 5000;
+            current_item.totalMoney = current_item.protectionMoney + current_item.imbuePrice;
             break;
         }
         case 'intricate': {
-            document.getElementById("protectMoney").textContent = "30000";
-            document.getElementById("totalMoney").textContent = "25000";
+            current_item.protectionMoney = 30000;
+            current_item.imbuePrice = 25000;
+            current_item.totalMoney = current_item.protectionMoney + current_item.imbuePrice;
             break;
-        } 
+        }
         case 'powerful': {
-            document.getElementById("protectMoney").textContent = "50000";
-            document.getElementById("totalMoney").textContent = "100000";
+            current_item.protectionMoney = 50000;
+            current_item.imbuePrice = 100000;
+            current_item.totalMoney = current_item.protectionMoney + current_item.imbuePrice;
             break;
         }
 
     }
-    document.getElementById("totalMoney");
+    document.getElementById("protectMoney").textContent = current_item.protectionMoney;
+    document.getElementById("totalMoney").textContent = current_item.imbuePrice;
+
     document.getElementById("item1").style.backgroundImage = "none";
     document.getElementById("item2").style.backgroundImage = "none";
     document.getElementById("item3").style.backgroundImage = "none";
     document.getElementById("quant_item1").textContent = "0";
     document.getElementById("quant_item2").textContent = "0";
     document.getElementById("quant_item3").textContent = "0";
-    showBonusImbue(categoria);
+
+    showBonusImbue();
 }
 
-function showBonusImbue(categoria) {
+function showBonusImbue() {
     var divBonus = document.getElementById("divBonus");
-    var bonus = item_imbuing[categoria].bonus;
+    var bonus = current_item.itemProp.bonus;
 
     removeAllElementsDiv(divBonus);
 
@@ -543,23 +602,8 @@ function showBonusImbue(categoria) {
         var div_inner_block = document.createElement("div");
         var p = document.createElement("p");
 
-        var bonus_percent_value;
-        switch (imbue_type) {
-            case 'basic': {
-                bonus_percent_value = bonus[i]["bonus-percent-value"][0];
-                break;
-            }
-            case 'intricate': {
-                bonus_percent_value = bonus[i]["bonus-percent-value"][1];
-                break;
-            }
-            case 'powerful': {
-                bonus_percent_value = bonus[i]["bonus-percent-value"][2];
-                break;
-            }
-        }
         //adicionando texto do bonus
-        p.textContent = bonus_percent_value + "% " + bonus[i]["bonus-msg-small"];
+        p.textContent = bonus[i].imbue_type[current_item.imbueType]["bonus-value"] + bonus[i]["bonus-msg-small"];
         //adicionando imagem
         div_inner_block.style.backgroundImage = "url(" + bonus[i].image + ")";
         //add divs e p
@@ -580,83 +624,51 @@ function bonus_selected(element) {
         element.classList.remove("selected");
     });
     element.classList.add("selected");
-    showItensForImbue(element);
+    current_item.bonusSelected = bonus_type[element.dataset.type];
+    showItensForImbue();
 
 }
 
-function showItensForImbue(div_block_selected) {
+function showItensForImbue() {
     //itens necessarios para imbuir
-    var itensForImbue1 = document.getElementById("item1");
-    var itensForImbue2 = document.getElementById("item2");
-    var itensForImbue3 = document.getElementById("item3");
+    var itemForImbue1 = document.getElementById("item1");
+    var itemForImbue2 = document.getElementById("item2");
+    var itemForImbue3 = document.getElementById("item3");
     //quantidade dos items
-    var itensForImbue1_1 = document.getElementById("quant_item1");
-    var itensForImbue2_2 = document.getElementById("quant_item2");
-    var itensForImbue3_3 = document.getElementById("quant_item3");
+    var quantItemForImbue1 = document.getElementById("quant_item1");
+    var quantItemForImbue2 = document.getElementById("quant_item2");
+    var quantItemForImbue3 = document.getElementById("quant_item3");
 
-    switch (imbue_type) {
+    switch (current_item.imbueType) {
         case 'basic': {
-            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
-            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
-            itensForImbue2.style.backgroundImage = "none";
-            itensForImbue2_2.textContent = "0";
-            itensForImbue3.style.backgroundImage = "none";
-            itensForImbue3_3.textContent = "0";
+            itemForImbue1.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.basic.image + ")";
+            quantItemForImbue1.textContent = current_item.bonusSelected.imbue_type.basic.amount;
+            itemForImbue2.style.backgroundImage = "none";
+            quantItemForImbue2.textContent = "0";
+            itemForImbue3.style.backgroundImage = "none";
+            quantItemForImbue3.textContent = "0";
             break;
         }
         case 'intricate': {
-            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['basic'].image + ")";
-            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['basic'].amount;
-            itensForImbue2.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
-            itensForImbue2_2.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
-            itensForImbue3.style.backgroundImage = "none";
-            itensForImbue3_3.textContent = "0";
+            itemForImbue1.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.basic.image + ")";
+            quantItemForImbue1.textContent = current_item.bonusSelected.imbue_type.basic.amount;
+            itemForImbue2.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.intricate.image + ")";
+            quantItemForImbue2.textContent = current_item.bonusSelected.imbue_type.intricate.amount;
+            itemForImbue3.style.backgroundImage = "none";
+            quantItemForImbue3.textContent = "0";
             break;
         }
         case 'powerful': {
-            itensForImbue1.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['basic'].image + ")";
-            itensForImbue1_1.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['basic'].amount;
-            itensForImbue2.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].image + ")";
-            itensForImbue2_2.textContent = bonus_type[div_block_selected.dataset.type].imbue_type['intricate'].amount;
-            itensForImbue3.style.backgroundImage = "url(" + bonus_type[div_block_selected.dataset.type].imbue_type['intricate'].image + ")";
-            itensForImbue3_3.textContent = bonus_type[div_block_selected.dataset.type].imbue_type[imbue_type].amount;
-
+            itemForImbue1.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.basic.image + ")";
+            quantItemForImbue1.textContent = current_item.bonusSelected.imbue_type.basic.amount;
+            itemForImbue2.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.intricate.image + ")";
+            quantItemForImbue2.textContent = current_item.bonusSelected.imbue_type.intricate.amount;
+            itemForImbue3.style.backgroundImage = "url(" + current_item.bonusSelected.imbue_type.powerful.image + ")";
+            quantItemForImbue3.textContent = current_item.bonusSelected.imbue_type.powerful.amount;
             break;
         }
     }
-
-
 }
-//Função que adiciona os itens (no select), de acordo com a categoria
-function showOptionItens(categoria) {
-    var item_select = document.getElementById("item_select");
-
-    removeOptions(item_select);
-
-    //popula novamente o select de item
-    var categoria_array = item_imbuing[categoria].itens;
-    for (var key of Object.keys(categoria_array)) {
-        var option = document.createElement("option");
-        option.text = key;
-        option.value = categoria_array[key]["value-option"];
-        item_select.add(option);
-    }
-
-    changeItem();
-
-}
-
-
-function changeItem() {
-    const categoria_select = document.getElementById("categoria_select");
-    const item_select = document.getElementById("item_select");
-    const opt_item_select = item_select.options[item_select.selectedIndex];
-    const itemImg = document.getElementById("itemImg");
-    current_item = item_imbuing[categoria_select.value].itens[opt_item_select.text];
-
-    itemImg.style = "background-image: url(" + current_item.image + ")";
-}
-
 
 //remove as opções (<option></option>) de um select qualquer (<select></select>)
 function removeOptions(selectbox) {
