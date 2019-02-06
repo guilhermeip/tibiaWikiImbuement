@@ -39,17 +39,18 @@ h1{
     -webkit-flex-wrap:       wrap;         /* Safari 8 */
     justify-content:         center;
     -webkit-justify-content: center;       /* Safari 8 */
-    height: 110px;
+    height: 150px;
     overflow: auto;
 }
   
 .block {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 130px;
     border: 1px solid #ccc;
     margin-left: 5px;
     cursor: pointer;  
-    box-shadow: 0 9px 5px #999;      
+    box-shadow: 0 9px 5px #999;   
+    overflow: auto;   
 }
 
 
@@ -128,5 +129,5 @@ table {
 td {
     vertical-align: center;
     text-align: center;
-    width: 20%;
+    width: calc(100%/6);
 }

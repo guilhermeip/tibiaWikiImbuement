@@ -12,7 +12,7 @@
 
 </head>
 
-<body>
+<body onload="loadBody()">
 
     <form style="margin:auto;height: 500px;">
         <div class="row">
@@ -58,20 +58,17 @@
                     <label class="radio-inline">
                         <div class="radio-imbue">
                             <input value="basic" type="radio" name="optradio" checked onchange="bonusRadioChange(this.value)">Basic
-                            Lich Shroud
                         </div>
                     </label>
                     <label class="radio-inline">
                         <div class="radio-imbue">
-                            <input value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate
-                            Lich Shroud <b>(Premium)</b>
+                            <input value="intricate" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Intricate <b>(Premium)</b>
                         </div>
 
                     </label>
                     <label class="radio-inline">
                         <div class="radio-imbue">
-                            <input value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful
-                            Lich Shroud <b>(Premium)</b>
+                            <input value="powerful" type="radio" name="optradio" onchange="bonusRadioChange(this.value)">Powerful <b>(Premium)</b>
                         </div>
 
                     </label>
@@ -83,17 +80,20 @@
                 <table>
                     <tbody>
                         <tr>
-                            <td>
+                            <td id="tdItem1">
                                 <div id="item1" class="fig32"></div>
                             </td>
-                            <td>
+                            <td id="tdItem2">
                                 <div id="item2" class="fig32"></div>
                             </td>
-                            <td>
+                            <td id="tdItem3">
                                 <div id="item3" class="fig32"></div>
                             </td>
                             <td>
-                                <p class="protectionCharm" style="margin: 0">Protection Charm</p>
+                                <p class="protectionCharm" style="margin: 0" onclick="protectionClick()">Protection Charm</p>
+                            </td>
+                            <td>
+                                <p style="margin: 0">Imbue price</p>
                             </td>
                             <td>
                                 <p style="margin: 0">Total</p>
@@ -117,12 +117,14 @@
                             </td>
                             <td>
                                 <div id="protectMoney" class="divMoneyRect">
-                                    10000
+                                </div>
+                            </td>
+                            <td>
+                                <div id="imbueMoney" class="divMoneyRect">
                                 </div>
                             </td>
                             <td>
                                 <div id="totalMoney" class="divMoneyRect">
-                                    5000
                                 </div>
                             </td>
                         </tr>
